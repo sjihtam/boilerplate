@@ -1,2 +1,2 @@
-Personal boilerplate for the start of a new project
+Personal css grid boilerplate for the start of a new project
 
