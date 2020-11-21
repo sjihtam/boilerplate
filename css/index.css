@@ -8,18 +8,72 @@ h1 {
   color: red;
 }
 
-.navigatie a {
-  color:red;
-
-}
-
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display:grid;
+  height: 100vh;
+  grid-template:"nav nav nav"
+    "dailynews dailynews adspace"
+    "dailynews2 top5 top5"
+    "dailynews3 dailynews3 dailynews3"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 0.7fr 0.5fr 0.2fr;
   background-color: #2196F3;
-  padding: 10px;
+  padding: 0px;
+
 }
 
-.grid-item {
+.navigatie {
+  background-color: turquoise;
+  grid-area:nav;
+
+}
+
+.dailynews {
+  background-color: purple;
+  grid-area:dailynews;
+}
+
+.adspace {
+  background-color: pink;
+  grid-area:adspace;
+}
+
+.dailynews2 {
+  background-color: yellow;
+  grid-area:dailynews2;
+}
+
+.top5 {
+  background-color: orange;
+  grid-area:top5;
+}
+
+.dailynews3 {
+  background-color: green;
+  grid-area:dailynews3;
+}
+
+.footer {
+  background-color: blue;
+  grid-area:footer;
+}
+
+@media only screen and (max-width: 550px){
+  .grid-container{
+    display:grid;
+    height: 100vh;
+    grid-template:
+      "nav"
+      "dailynews"
+      "top5"
+      "dailynews2"
+      "dailynews3"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: #2196F3;
+    padding: 0px;
+  }
 
 }
