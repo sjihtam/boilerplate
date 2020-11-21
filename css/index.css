@@ -4,10 +4,6 @@
 
 }
 
-h1 {
-  color: red;
-}
-
 .grid-container {
   display:grid;
   height: 100vh;
@@ -18,16 +14,67 @@ h1 {
     "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 1fr 0.7fr 0.5fr 0.2fr;
-  background-color: #2196F3;
-  padding: 0px;
+  background-color: #FFF;
+  padding: 0px 40px 0px 40px;
 
 }
 
 .navigatie {
   background-color: turquoise;
+  display: grid;
+  grid-template: "logoarea navigatie navigatie";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-area:nav;
 
 }
+
+.logoarea {
+  font-family: Poppins;
+  left: 10px;
+  grid-area: logoarea;
+}
+
+.logoarea img{
+  position: absolute;
+  right: 0px;
+}
+
+.logoarea h1{
+  float: left;
+  position: relative;
+}
+
+.navigatie {
+  align-items: center;
+}
+
+.navigatie ul{
+  display: flex;
+  justify-content: space-around;
+  grid-area: navigatie;
+  list-style-type: none;
+}
+
+.navigatie ul li{
+  display: inline-block;
+  justify-content: space-around;
+
+}
+
+.navigatie ul li a:hover{
+  background-color: white;
+  color: grey;
+}
+
+.navigatie ul li a{
+  font-family: monospace;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid #fff;
+  }
+
+
 
 .dailynews {
   background-color: purple;
@@ -69,9 +116,10 @@ h1 {
       "top5"
       "dailynews2"
       "dailynews3"
+      "adspace"
       "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 2fr 1fr 1fr 1fr 1fr 1fr;
     background-color: #2196F3;
     padding: 0px;
   }
